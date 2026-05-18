@@ -1,14 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/product/{id}', function ($id) {
     // Database検索などの処理（メソッドの呼び出し）
