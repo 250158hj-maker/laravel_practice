@@ -11,5 +11,9 @@ Route::get('/about', function () {
 });
 
 Route::get('/product/{id}', function ($id) {
-    return view('product.show');
+    // Database検索などの処理（メソッドの呼び出し）
+    $message = "item id is {$id}.";
+    return view('product.show', [
+        'message' => $message
+    ]);
 });
