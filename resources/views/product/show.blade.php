@@ -1,7 +1,6 @@
-<h2>Product Page!!!!!!!!!!!!!</h2>
+<h1>Product Page!</h1>
 
-<p>動的なコンテンツはここに表示されます</p>
-
-<p>
-    {{ $message }}
-</p>
+<div>
+    <h2>商品名：{{ $product['name'] }}</h2>
+    <h3>価格：&yen;{{ $product['price'] }}</h3>
+</div>

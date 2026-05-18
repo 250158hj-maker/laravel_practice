@@ -35,7 +35,19 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $products = [
+            1 => ['name' => 'Coffee', 'price' => 500],
+            2 => ['name' => '紅茶', 'price' => 300],
+            3 => ['name' => '緑茶', 'price' => 250]
+        ];
+
+        $product = '';
+
+        if ($id > 0) $product = $products[$id];
+
+        $data = ['product' => $product];
+
+        return view('product.show', $data);
     }
 
     /**
